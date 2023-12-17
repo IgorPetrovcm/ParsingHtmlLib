@@ -4,6 +4,7 @@ public static class CorrectHtmlText
 {
     private static string CorrectIndentention(int countIndents)
     {
+        if (countIndents < 0) return "";
         string indentation = "";
         for (int i = 0; i < countIndents; i++)
         {
@@ -17,7 +18,7 @@ public static class CorrectHtmlText
     {
         string correctHtml = "";
 
-        Stack<char> stack = new Stack<char>();
+        int stack = 0;
 
         int lengthToEndDeclaration = 0;
         while (text[lengthToEndDeclaration] != '>')
@@ -37,13 +38,13 @@ public static class CorrectHtmlText
 
                 if (text[i + 1] == '/')
                 {
-                    if (counter > stack.Count)
+                    if (counter > stack)
                     {
                         counter--;
                     }
 
-                    stack.Pop();
-                    correctHtml += "\n" + CorrectIndentention(stack.Count);
+                    stack--;
+                    correctHtml += "\n" + CorrectIndentention(stack);
 
                     while (text[i + lengthToEndTag] != '<')
                     {
@@ -55,13 +56,13 @@ public static class CorrectHtmlText
                     i += lengthToEndTag;
                 }
 
-                if (counter > stack.Count)
+                if (counter > stack)
                 {
-                    correctHtml += "\n" + CorrectIndentention(stack.Count);
+                    correctHtml += "\n" + CorrectIndentention(stack);
                     counter--;
                 }
 
-                stack.Push('<');
+                stack++;
                 counter++;
                 while (text[i + lengthToEndTag] != '>' && text[i + lengthToEndTag] != '/')
                 {
@@ -71,7 +72,7 @@ public static class CorrectHtmlText
 
                 if (text[i + lengthToEndTag] == '>')
                 {
-                    correctHtml += text[i + lengthToEndTag] + "\n" + CorrectIndentention(stack.Count);
+                    correctHtml += text[i + lengthToEndTag] + "\n" + CorrectIndentention(stack);
                     i += lengthToEndTag;
 
                     continue;
@@ -79,10 +80,10 @@ public static class CorrectHtmlText
 
                 if (text[i + lengthToEndTag] == '/')
                 {
-                    stack.Pop();
+                    stack--;
                     counter--;
                     correctHtml += text[i + lengthToEndTag].ToString() + text[i + lengthToEndTag + 1].ToString() +
-                                   "\n" + CorrectIndentention(stack.Count);
+                                   "\n" + CorrectIndentention(stack);
                     i += lengthToEndTag;
 
                     continue;

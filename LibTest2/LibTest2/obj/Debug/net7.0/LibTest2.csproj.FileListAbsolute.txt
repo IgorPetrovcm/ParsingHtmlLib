@@ -1,0 +1,11 @@
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/bin/Debug/net7.0/LibTest2.deps.json
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/bin/Debug/net7.0/LibTest2.dll
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/bin/Debug/net7.0/LibTest2.pdb
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/LibTest2.GeneratedMSBuildEditorConfig.editorconfig
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/LibTest2.AssemblyInfoInputs.cache
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/LibTest2.AssemblyInfo.cs
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/LibTest2.csproj.CoreCompileInputs.cache
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/LibTest2.dll
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/refint/LibTest2.dll
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/LibTest2.pdb
+/home/admin/General/Projects/ParsingHtmlLib/LibTest2/LibTest2/obj/Debug/net7.0/ref/LibTest2.dll
